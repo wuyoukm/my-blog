@@ -697,9 +697,11 @@
 <h3 id="apache"><a href="#apache" class="headerlink" title="apache"></a>apache</h3><p>ubuntu默认在/var/log/apache2 /access.log 宝塔默认在./BtSoft/apache/logs/access.log <img "" class="lazyload placeholder" data-original="http://tc.wuyoukm.top/2021-05-07-EpVDgz.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="image.png"> 清除日志的话把404的日志删除或者 404的客户端访问IP给替换掉</p>
 <h3 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h3><p>ubuntu默认在/var/log/nginx /access.log 宝塔默认在BtSoft\wwwlogs\ip.log <img "" class="lazyload placeholder" data-original="http://tc.wuyoukm.top/2021-05-07-JwpNZl.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="image.png"> 清除日志的话把404的日志删除或者 404的客户端访问IP给替换掉</p>
 <h2 id="日志清理"><a href="#日志清理" class="headerlink" title="日志清理"></a>日志清理</h2><p>1.ip替换</p>
-<p> sed -i ‘s/192.168.1.36/192.168.2.2/g’ access.log</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> sed \-i <span class="string">&#x27;s/192.168.1.36/192.168.2.2/g&#x27;</span> access.log</span><br></pre></td></tr></table></figure>
+
 <p><img "" class="lazyload placeholder" data-original="http://tc.wuyoukm.top/2021-05-07-mrqSmF.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="image.png"> 2.清除相关日志</p>
-<p> sed -i -e ‘/ 404 /d’ access.log </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> sed \-i \-e <span class="string">&#x27;/ 404 /d&#x27;</span> access.log</span><br></pre></td></tr></table></figure>
+
 <p><img "" class="lazyload placeholder" data-original="http://tc.wuyoukm.top/2021-05-07-1t64JY.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="image.png"></p>
 
       </div>
