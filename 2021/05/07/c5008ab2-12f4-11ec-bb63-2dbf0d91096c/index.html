@@ -10,6 +10,17 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W818ZFQJQH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-W818ZFQJQH');
+</script>
+
 
   <title>团队学习计划week1 | wuyoukm</title>
 
@@ -673,6 +684,22 @@
         </span>
       
 
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fa fa-file-text-o"></i> Words: 218 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fa fa-clock-o"></i> Reading time: 1min |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fa fa-eye"></i> reading：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
       
     
   </div>
@@ -1556,7 +1583,7 @@
 <!-- 具体js，请前往valine/script.ejs查看 -->
 
         <script>
-  var requiredFields = '';
+  var requiredFields = 'nick,mail';
   requiredFields = requiredFields.split(',');
   comment_el = '.comment';
   let looperValine = null;
