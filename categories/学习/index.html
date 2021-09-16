@@ -816,11 +816,17 @@
 
   <script>
     window.onload = function(){
-  　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "54px";
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "40px";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.height = "40px";
+} else {
+      　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "54px";
         document.querySelector("#daodream-container .daodream-launcher-button").style.height = "54px";
         document.querySelector("#daodream-container .daodream-launcher-button").style.boxShadow = "-2px 2px 2px 2px rgb(255 255 255 / 50%)";
         document.querySelector("#daodream-container .daodream-launcher-button").style.cursor = 'url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer';
         document.querySelector("#daodream-container .daodream-launcher-button").style.backgroundSize = "54px";
+}
+
   　　}
   </script>
 
@@ -884,58 +890,6 @@
 <script src="/js/goTop.js"></script>
     
     <!-- 渲染左下角音乐播放器 -->
-    
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
-<style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8062553743"
-  fixed='true'
-  autoplay='false'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.7'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
-  }
-</style> -->
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
 
     <!-- 图片放大 -->
