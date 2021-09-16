@@ -871,10 +871,17 @@
   </div>
 
   <script>
+    //判断手机还是PC自定义修改样式
     window.onload = function(){
     if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-      　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "40px";
-        document.querySelector("#daodream-container .daodream-launcher-button").style.height = "40px";
+      　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "44px";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.height = "44px";
+                document.querySelector("#daodream-container .daodream-launcher-button").style.boxShadow = "-2px 2px 2px 2px rgb(255 255 255 / 50%)";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.cursor = 'url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer';
+        document.querySelector("#daodream-container .daodream-launcher-button").style.backgroundSize = "54px";
+        document.querySelector("#daodream-container .daodream-launcher-enabled").style.right = "5px";
+        document.querySelector("#daodream-container .daodream-launcher-enabled").style.bottom = "130px";
+
 } else {
       　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "54px";
         document.querySelector("#daodream-container .daodream-launcher-button").style.height = "54px";
