@@ -22,7 +22,7 @@
 </script>
 
 
-  <title>my-tools | wuyoukm</title>
+  <title>在线工具 | wuyoukm</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -705,51 +705,80 @@
 </div>
 
 
-<div class="container tools">
-    <a class="tool" href="https://www.wuyoukm.top/json">
-        <p>JSON格式化</p>
-        <p>https://www.wuyoukm.top/json</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/json2go">
-        <p>JSON转Go Struct</p>
-        <p>https://www.wuyoukm.top/json2go</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/base64">
-        <p>Base64编码解码</p>
-        <p>https://www.wuyoukm.top/base64</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/json2yaml">
-        <p>JSON/YAML转换</p>
-        <p>https://www.wuyoukm.top/json2yaml</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/aes">
-        <p>AES加密解密</p>
-        <p>https://www.wuyoukm.top/aes</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/timestamp">
-        <p>Unix时间戳</p>
-        <p>https://www.wuyoukm.top/timestamp</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/color">
-        <p>颜色值转换</p>
-        <p>https://www.wuyoukm.top/color</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/json2xml">
-        <p>JSON/XML转换</p>
-        <p>https://www.wuyoukm.top/json2xml</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/unicode">
-        <p>Unicode编码转换</p>
-        <p>https://www.wuyoukm.top/unicode</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/url">
-        <p>URL编码解码</p>
-        <p>https://www.wuyoukm.top/url</p>
-    </a>
-    <a class="tool" href="https://www.wuyoukm.top/des">
-        <p>DES加密解密</p>
-        <p>https://www.wuyoukm.top/des</p>
-    </a>
+
+<div style="display:flex;">
+
+    <aside>
+        <h1 class="logo"><a href="https://www.wuyoukm.top/">my-tools</a></h1>
+        <nav class="side-nav">
+            <p>JSON</p>
+            <ul>
+                <li><a href="https://www.wuyoukm.top/json">JSON格式化</a></li>
+                <li><a href="https://www.wuyoukm.top/json2xml">JSON/XML转换</a></li>
+                <li><a href="https://www.wuyoukm.top/json2yaml">JSON/YAML转换</a></li>
+                <li><a href="https://www.wuyoukm.top/json2go">JSON转Go Struct</a></li>
+            </ul>
+            <p>转换</p>
+            <ul>
+                <li><a href="https://www.wuyoukm.top/timestamp">Unix时间戳</a></li>
+                <li><a href="https://www.wuyoukm.top/color">颜色值转换</a></li>
+                <li><a href="https://www.wuyoukm.top/url">URL编码解码</a></li>
+                <li><a href="https://www.wuyoukm.top/unicode">Unicode编码转换</a></li>
+            </ul>
+            <p>加密</p>
+            <ul>
+                <li><a href="https://www.wuyoukm.top/aes">AES加密解密</a></li>
+                <li><a href="https://www.wuyoukm.top/des">DES加密解密</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <script>
+        var _hmt = _hmt || [];
+        let hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e3d5bc397b23c3f6a8036739dae1557b";
+        let s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+        let tools = document.querySelectorAll('.side-nav li');
+        for (let i = 0; i < tools.length; i++) {
+            let node = tools[i];
+            if (node.querySelector('a').getAttribute('href').endsWith(document.location.pathname)) {
+                node.classList.add('active');
+                break
+            }
+        }
+    </script>
+    <main>
+        <div class="container">
+            <h1>Base64编码/解码</h1>
+            <textarea id="area_input" class="textarea mt-2" rows="15" onpaste="setTimeout(encode,1)"></textarea>
+            <div class="content-center mt-2">
+                <button class="button" onclick="encode()"> <i class="fa fa-arrow-down"></i><span>编码</span></button>
+                <button class="button" onclick="decode()"> <i class="fa fa-arrow-up"></i><span>解码</span></button>
+                <button class="button" onclick="cleanup()">清空</button>
+            </div>
+            <textarea id="area_output" class="textarea mt-2" rows="15" onpaste="setTimeout(decode,1)"></textarea>
+        </div>
+    </main>
+    <script>
+        let area_input = document.getElementById('area_input');
+        let area_output = document.getElementById('area_output');
+
+        function encode() {
+            area_output.value = btoa(unescape(encodeURIComponent(area_input.value)))
+        }
+
+        function decode() {
+            area_input.value = decodeURIComponent(escape(atob(area_output.value)))
+        }
+
+        function cleanup() {
+            area_input.value = '';
+            area_output.value = '';
+        }
+    </script>
+    <div style="all: initial;">
+        <div id="__hcfy__" style="all: initial;"></div>
+    </div>
 </div>
 
 
