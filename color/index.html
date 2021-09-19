@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W818ZFQJQH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-W818ZFQJQH');
+</script>
+
+
+  <title>color | wuyoukm</title>
+
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+
+  
+
+  <script>(function (i, s, o, g, r, a, m) {
+      i['DaoVoiceObject'] = r;
+      i[r] = i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        };
+      i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      a.charset = 'utf-8';
+      m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', ('https:' === document.location.protocol ? 'https:' : 'http:') + "//shzj.wuyoukm.top/00222a92.js", 'daovoice');
+    daovoice('init', {
+      app_id: "00222a92",
+    });
+    daovoice('update');
+  </script>
+
+
+
+
+
+  
+    <script>
+        var themeModelId = '';
+        if (themeModelId) {
+            localStorage.setItem('modelId', themeModelId);
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
+    <script>
+        var live2dOpen = eval('true') || false;
+        if (!live2dOpen) {
+            localStorage.setItem('waifu-display', 1609323474481);
+        }
+    </script>
+  
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+        <script src="/js/valine/av-min@3.0.4.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+    
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  <script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+<div id='loader'>
+  <link rel="stylesheet" href="/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">loading...</div>
+  </div>
+</div>
+
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
+</script>
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 头部导航等 -->
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/favicon.ico" alt="logo">
+      <h3 class="drawer-box-head_title">wuyoukm</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">友链</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fa fa-link"></i>
+                    
+                    <span class="name">小秘密</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://status.wuyoukm.top/">
+                      
+                      <span>服务器监控</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://img.gksec.com/">
+                      
+                      <span>图床</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/anti-av">
+                      
+                      <span>杀毒识别</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/my-tools">
+                      
+                      <span>在线工具</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/wuyoukm">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/favicon.ico" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">wuyoukm</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="友链">
+                  
+                  <span class="name">友链</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="小秘密">
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">小秘密</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://status.wuyoukm.top/">
+                      
+                      <span>服务器监控</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://img.gksec.com/">
+                      
+                      <span>图床</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/anti-av">
+                      
+                      <span>杀毒识别</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/my-tools">
+                      
+                      <span>在线工具</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <!-- <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div> -->
+        <h2>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">搜索</span>
+          </span>
+          <i class="fa fa-close close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="Please enter keywords"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/wuyoukm" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js" data-pjax></script>
+    
+</header>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+    function loadScript(src, cb) {
+        setTimeout(function () {
+            var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            if (cb) script.onload = cb;
+            script.setAttribute('src', src);
+            HEAD.appendChild(script);
+        });
+    }
+
+    //https://github.com/filamentgroup/loadCSS
+    var loadCSS = function (href, before, media, attributes) {
+        var doc = window.document;
+        var ss = doc.createElement("link");
+        var ref;
+        if (before) {
+            ref = before;
+        }
+        else {
+            var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+            ref = refs[refs.length - 1];
+        }
+        var sheets = doc.styleSheets;
+        if (attributes) {
+            for (var attributeName in attributes) {
+                if (attributes.hasOwnProperty(attributeName)) {
+                    ss.setAttribute(attributeName, attributes[attributeName]);
+                }
+            }
+        }
+        ss.rel = "stylesheet";
+        ss.href = href;
+        ss.media = "only x";
+        function ready(cb) {
+            if (doc.body) {
+                return cb();
+            }
+            setTimeout(function () {
+                ready(cb);
+            });
+        }
+        ready(function () {
+            ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+        });
+        var onloadcssdefined = function (cb) {
+            var resolvedHref = ss.href;
+            var i = sheets.length;
+            while (i--) {
+                if (sheets[i].href === resolvedHref) {
+                    return cb();
+                }
+            }
+            setTimeout(function () {
+                onloadcssdefined(cb);
+            });
+        };
+        function loadCB() {
+            if (ss.addEventListener) {
+                ss.removeEventListener("load", loadCB);
+            }
+            ss.media = media || "all";
+        }
+        if (ss.addEventListener) {
+            ss.addEventListener("load", loadCB);
+        }
+        ss.onloadcssdefined = onloadcssdefined;
+        onloadcssdefined(loadCB);
+        return ss;
+    };
+    
+</script>
+ 
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
+    <!-- 内容区域 -->
+    <div id="safearea">
+      <main class="main" id="pjax-container" style="margin-top: 0;">
+        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;">
+</div>
+<div class="bg-light-floor-about" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
+<div class="lazyload about-header" data-original="https://pic4.zhimg.com/80/v2-d12b0c9802720897793993a5a199720f_1440w.jpg">
+</div>
+
+
+
+<div style="display:flex;">
+
+    <aside>
+        <h1 class="logo">
+            <a href="https://www.wuyoukm.top/">回到博客</a>
+        </h1>
+        <nav class="side-nav">
+            <p>JSON</p>
+            <ul>
+                <li><a href="https://www.wuyoukm.top/json2go">JSON转Go Struct</a></li>
+            </ul>
+            <p>转换</p>
+            <ul>
+                <li><a href="https://www.wuyoukm.top/timestamp">Unix时间戳</a></li>
+                <li><a href="https://www.wuyoukm.top/color">颜色值转换</a></li>
+                <li><a href="https://www.wuyoukm.top/url">URL编码解码</a></li>
+                <li><a href="https://www.wuyoukm.top/unicode">Unicode编码转换</a></li>
+            </ul>
+            <p>加密</p>
+            <ul>
+                <li><a href="https://www.wuyoukm.top/aes">AES加密解密</a></li>
+                <li><a href="https://www.wuyoukm.top/des">DES加密解密</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="container">
+            <h1>颜色值转换</h1>
+            <div class="group fullwidth mt-2"><span class="static">颜色值</span>
+                <input id="input_color" class="input" placeholder="#6c928c" onpaste="setTimeout(convert,1)" data-com.bitwarden.browser.user-edited="yes">
+                <button class="button primary" onclick="convert()">转换</button></div>
+            <div class="flex" style="flex-wrap:wrap"><span class="tag tips">输入示例(大小写不敏感):</span>
+                <span class="tag" style="background-color:#707b7c" onclick="inputExample(this)">#707B7C</span>
+                <span class="tag" style="background-color:#f7dc6faa" onclick="inputExample(this)">#AAF7DC6F</span>
+                <span class="tag" style="background-color:#48c9b0" onclick="inputExample(this)">rgb(72,201,176)</span>
+                <span class="tag" style="background-color:#f1948a80" onclick="inputExample(this)">rgba(241,148,138,0.5)</span>
+                <span class="tag" style="background-color:#5faee3" onclick="inputExample(this)">hsl(204,70%,63%)</span>
+            </div>
+            <table class="table divide fullwidth mt-2">
+                <thead>
+                    <tr>
+                        <th>预览</th>
+                        <th>格式</th>
+                        <th>转换结果</th>
+                    </tr>
+                </thead>
+                <tbody id="table_preview">
+                    <tr>
+                        <td style="background-color:#777788"></td>
+                        <td>HEX</td>
+                        <td>#777788</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#777788"></td>
+                        <td>RGB</td>
+                        <td>rgb(119,119,136)</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgba(119,119,136,1.000)"></td>
+                        <td>RGBA</td>
+                        <td>rgba(119,119,136,1.000)</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgba(119,119,136,1.000)"></td>
+                        <td>ARGB</td>
+                        <td>#ff777788</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#777788"></td>
+                        <td>HSL</td>
+                        <td>hsl(240,7%,50%)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="mt-2">CSS颜色表</h2>
+            <div class="tile mt-2">HTML 和 CSS 颜色规范中定义了 147 中颜色名（17 种标准颜色加 130 种其他颜色）。下面的表格中列出了所有这些颜色，以及它们的十六进制值。<br>17 种标准色是 aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow。</div>
+            <div id="table_list">
+                <h3 class="mt-2">gray</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>gainsboro</td>
+                            <td style="background-color: gainsboro"></td>
+                            <td>#dcdcdc</td>
+                            <td>220, 220, 220</td>
+                            <td>0, 0%, 86%</td>
+                        </tr>
+                        <tr>
+                            <td>lightgray</td>
+                            <td style="background-color: lightgray"></td>
+                            <td>#d3d3d3</td>
+                            <td>211, 211, 211</td>
+                            <td>0, 0%, 83%</td>
+                        </tr>
+                        <tr>
+                            <td>silver</td>
+                            <td style="background-color: silver"></td>
+                            <td>#c0c0c0</td>
+                            <td>192, 192, 192</td>
+                            <td>0, 0%, 75%</td>
+                        </tr>
+                        <tr>
+                            <td>darkgray</td>
+                            <td style="background-color: darkgray"></td>
+                            <td>#a9a9a9</td>
+                            <td>169, 169, 169</td>
+                            <td>0, 0%, 66%</td>
+                        </tr>
+                        <tr>
+                            <td>gray</td>
+                            <td style="background-color: gray"></td>
+                            <td>#808080</td>
+                            <td>128, 128, 128</td>
+                            <td>0, 0%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>dimgray</td>
+                            <td style="background-color: dimgray"></td>
+                            <td>#696969</td>
+                            <td>105, 105, 105</td>
+                            <td>0, 0%, 41%</td>
+                        </tr>
+                        <tr>
+                            <td>lightslategray</td>
+                            <td style="background-color: lightslategray"></td>
+                            <td>#778899</td>
+                            <td>119, 136, 153</td>
+                            <td>210, 14%, 53%</td>
+                        </tr>
+                        <tr>
+                            <td>slategray</td>
+                            <td style="background-color: slategray"></td>
+                            <td>#708090</td>
+                            <td>112, 128, 144</td>
+                            <td>210, 13%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>darkslategray</td>
+                            <td style="background-color: darkslategray"></td>
+                            <td>#2f4f4f</td>
+                            <td>47, 79, 79</td>
+                            <td>180, 25%, 25%</td>
+                        </tr>
+                        <tr>
+                            <td>black</td>
+                            <td style="background-color: black"></td>
+                            <td>#000000</td>
+                            <td>0, 0, 0</td>
+                            <td>0, 0%, 0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">red</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>indianred</td>
+                            <td style="background-color: indianred"></td>
+                            <td>#cd5c5c</td>
+                            <td>205, 92, 92</td>
+                            <td>0, 53%, 58%</td>
+                        </tr>
+                        <tr>
+                            <td>lightcoral</td>
+                            <td style="background-color: lightcoral"></td>
+                            <td>#f08080</td>
+                            <td>240, 128, 128</td>
+                            <td>0, 79%, 72%</td>
+                        </tr>
+                        <tr>
+                            <td>salmon</td>
+                            <td style="background-color: salmon"></td>
+                            <td>#fa8072</td>
+                            <td>250, 128, 114</td>
+                            <td>6, 93%, 71%</td>
+                        </tr>
+                        <tr>
+                            <td>darksalmon</td>
+                            <td style="background-color: darksalmon"></td>
+                            <td>#e9967a</td>
+                            <td>233, 150, 122</td>
+                            <td>15, 72%, 70%</td>
+                        </tr>
+                        <tr>
+                            <td>lightsalmon</td>
+                            <td style="background-color: lightsalmon"></td>
+                            <td>#ffa07a</td>
+                            <td>255, 160, 122</td>
+                            <td>17, 100%, 74%</td>
+                        </tr>
+                        <tr>
+                            <td>crimson</td>
+                            <td style="background-color: crimson"></td>
+                            <td>#dc143c</td>
+                            <td>220, 20, 60</td>
+                            <td>348, 83%, 47%</td>
+                        </tr>
+                        <tr>
+                            <td>red</td>
+                            <td style="background-color: red"></td>
+                            <td>#ff0000</td>
+                            <td>255, 0, 0</td>
+                            <td>0, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>firebrick</td>
+                            <td style="background-color: firebrick"></td>
+                            <td>#b22222</td>
+                            <td>178, 34, 34</td>
+                            <td>0, 68%, 42%</td>
+                        </tr>
+                        <tr>
+                            <td>darkred</td>
+                            <td style="background-color: darkred"></td>
+                            <td>#8b0000</td>
+                            <td>139, 0, 0</td>
+                            <td>0, 100%, 27%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">orange</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>lightsalmon</td>
+                            <td style="background-color: lightsalmon"></td>
+                            <td>#ffa07a</td>
+                            <td>255, 160, 122</td>
+                            <td>17, 100%, 74%</td>
+                        </tr>
+                        <tr>
+                            <td>coral</td>
+                            <td style="background-color: coral"></td>
+                            <td>#ff7f50</td>
+                            <td>255, 127, 80</td>
+                            <td>16, 100%, 66%</td>
+                        </tr>
+                        <tr>
+                            <td>tomato</td>
+                            <td style="background-color: tomato"></td>
+                            <td>#ff6347</td>
+                            <td>255, 99, 71</td>
+                            <td>9, 100%, 64%</td>
+                        </tr>
+                        <tr>
+                            <td>orangered</td>
+                            <td style="background-color: orangered"></td>
+                            <td>#ff4500</td>
+                            <td>255, 69, 0</td>
+                            <td>16, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>darkorange</td>
+                            <td style="background-color: darkorange"></td>
+                            <td>#ff8c00</td>
+                            <td>255, 140, 0</td>
+                            <td>33, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>orange</td>
+                            <td style="background-color: orange"></td>
+                            <td>#ffa500</td>
+                            <td>255, 165, 0</td>
+                            <td>39, 100%, 50%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">brown</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cornsilk</td>
+                            <td style="background-color: cornsilk"></td>
+                            <td>#fff8dc</td>
+                            <td>255, 248, 220</td>
+                            <td>48, 100%, 93%</td>
+                        </tr>
+                        <tr>
+                            <td>blanchedalmond</td>
+                            <td style="background-color: blanchedalmond"></td>
+                            <td>#ffebcd</td>
+                            <td>255, 235, 205</td>
+                            <td>36, 100%, 90%</td>
+                        </tr>
+                        <tr>
+                            <td>bisque</td>
+                            <td style="background-color: bisque"></td>
+                            <td>#ffe4c4</td>
+                            <td>255, 228, 196</td>
+                            <td>33, 100%, 88%</td>
+                        </tr>
+                        <tr>
+                            <td>navajowhite</td>
+                            <td style="background-color: navajowhite"></td>
+                            <td>#ffdead</td>
+                            <td>255, 222, 173</td>
+                            <td>36, 100%, 84%</td>
+                        </tr>
+                        <tr>
+                            <td>wheat</td>
+                            <td style="background-color: wheat"></td>
+                            <td>#f5deb3</td>
+                            <td>245, 222, 179</td>
+                            <td>39, 77%, 83%</td>
+                        </tr>
+                        <tr>
+                            <td>burlywood</td>
+                            <td style="background-color: burlywood"></td>
+                            <td>#deb887</td>
+                            <td>222, 184, 135</td>
+                            <td>34, 57%, 70%</td>
+                        </tr>
+                        <tr>
+                            <td>tan</td>
+                            <td style="background-color: tan"></td>
+                            <td>#d2b48c</td>
+                            <td>210, 180, 140</td>
+                            <td>34, 44%, 69%</td>
+                        </tr>
+                        <tr>
+                            <td>rosybrown</td>
+                            <td style="background-color: rosybrown"></td>
+                            <td>#bc8f8f</td>
+                            <td>188, 143, 143</td>
+                            <td>0, 25%, 65%</td>
+                        </tr>
+                        <tr>
+                            <td>sandybrown</td>
+                            <td style="background-color: sandybrown"></td>
+                            <td>#f4a460</td>
+                            <td>244, 164, 96</td>
+                            <td>28, 87%, 67%</td>
+                        </tr>
+                        <tr>
+                            <td>goldenrod</td>
+                            <td style="background-color: goldenrod"></td>
+                            <td>#daa520</td>
+                            <td>218, 165, 32</td>
+                            <td>43, 74%, 49%</td>
+                        </tr>
+                        <tr>
+                            <td>darkgoldenrod</td>
+                            <td style="background-color: darkgoldenrod"></td>
+                            <td>#b8860b</td>
+                            <td>184, 134, 11</td>
+                            <td>43, 89%, 38%</td>
+                        </tr>
+                        <tr>
+                            <td>peru</td>
+                            <td style="background-color: peru"></td>
+                            <td>#cd853f</td>
+                            <td>205, 133, 63</td>
+                            <td>30, 59%, 53%</td>
+                        </tr>
+                        <tr>
+                            <td>chocolate</td>
+                            <td style="background-color: chocolate"></td>
+                            <td>#d2691e</td>
+                            <td>210, 105, 30</td>
+                            <td>25, 75%, 47%</td>
+                        </tr>
+                        <tr>
+                            <td>saddlebrown</td>
+                            <td style="background-color: saddlebrown"></td>
+                            <td>#8b4513</td>
+                            <td>139, 69, 19</td>
+                            <td>25, 76%, 31%</td>
+                        </tr>
+                        <tr>
+                            <td>sienna</td>
+                            <td style="background-color: sienna"></td>
+                            <td>#a0522d</td>
+                            <td>160, 82, 45</td>
+                            <td>19, 56%, 40%</td>
+                        </tr>
+                        <tr>
+                            <td>brown</td>
+                            <td style="background-color: brown"></td>
+                            <td>#a52a2a</td>
+                            <td>165, 42, 42</td>
+                            <td>0, 59%, 41%</td>
+                        </tr>
+                        <tr>
+                            <td>maroon</td>
+                            <td style="background-color: maroon"></td>
+                            <td>#800000</td>
+                            <td>128, 0, 0</td>
+                            <td>0, 100%, 25%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">blue</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>aqua</td>
+                            <td style="background-color: aqua"></td>
+                            <td>#00ffff</td>
+                            <td>0, 255, 255</td>
+                            <td>180, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>cyan</td>
+                            <td style="background-color: cyan"></td>
+                            <td>#00ffff</td>
+                            <td>0, 255, 255</td>
+                            <td>180, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>lightcyan</td>
+                            <td style="background-color: lightcyan"></td>
+                            <td>#e0ffff</td>
+                            <td>224, 255, 255</td>
+                            <td>180, 100%, 94%</td>
+                        </tr>
+                        <tr>
+                            <td>paleturquoise</td>
+                            <td style="background-color: paleturquoise"></td>
+                            <td>#afeeee</td>
+                            <td>175, 238, 238</td>
+                            <td>180, 65%, 81%</td>
+                        </tr>
+                        <tr>
+                            <td>aquamarine</td>
+                            <td style="background-color: aquamarine"></td>
+                            <td>#7fffd4</td>
+                            <td>127, 255, 212</td>
+                            <td>160, 100%, 75%</td>
+                        </tr>
+                        <tr>
+                            <td>turquoise</td>
+                            <td style="background-color: turquoise"></td>
+                            <td>#40e0d0</td>
+                            <td>64, 224, 208</td>
+                            <td>174, 72%, 56%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumturquoise</td>
+                            <td style="background-color: mediumturquoise"></td>
+                            <td>#48d1cc</td>
+                            <td>72, 209, 204</td>
+                            <td>178, 60%, 55%</td>
+                        </tr>
+                        <tr>
+                            <td>darkturquoise</td>
+                            <td style="background-color: darkturquoise"></td>
+                            <td>#00ced1</td>
+                            <td>0, 206, 209</td>
+                            <td>181, 100%, 41%</td>
+                        </tr>
+                        <tr>
+                            <td>cadetblue</td>
+                            <td style="background-color: cadetblue"></td>
+                            <td>#5f9ea0</td>
+                            <td>95, 158, 160</td>
+                            <td>182, 25%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>steelblue</td>
+                            <td style="background-color: steelblue"></td>
+                            <td>#4682b4</td>
+                            <td>70, 130, 180</td>
+                            <td>207, 44%, 49%</td>
+                        </tr>
+                        <tr>
+                            <td>lightsteelblue</td>
+                            <td style="background-color: lightsteelblue"></td>
+                            <td>#b0c4de</td>
+                            <td>176, 196, 222</td>
+                            <td>214, 41%, 78%</td>
+                        </tr>
+                        <tr>
+                            <td>powderblue</td>
+                            <td style="background-color: powderblue"></td>
+                            <td>#b0e0e6</td>
+                            <td>176, 224, 230</td>
+                            <td>187, 52%, 80%</td>
+                        </tr>
+                        <tr>
+                            <td>lightblue</td>
+                            <td style="background-color: lightblue"></td>
+                            <td>#add8e6</td>
+                            <td>173, 216, 230</td>
+                            <td>195, 53%, 79%</td>
+                        </tr>
+                        <tr>
+                            <td>skyblue</td>
+                            <td style="background-color: skyblue"></td>
+                            <td>#87ceeb</td>
+                            <td>135, 206, 235</td>
+                            <td>197, 71%, 73%</td>
+                        </tr>
+                        <tr>
+                            <td>lightskyblue</td>
+                            <td style="background-color: lightskyblue"></td>
+                            <td>#87cefa</td>
+                            <td>135, 206, 250</td>
+                            <td>203, 92%, 75%</td>
+                        </tr>
+                        <tr>
+                            <td>deepskyblue</td>
+                            <td style="background-color: deepskyblue"></td>
+                            <td>#00bfff</td>
+                            <td>0, 191, 255</td>
+                            <td>195, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>dodgerblue</td>
+                            <td style="background-color: dodgerblue"></td>
+                            <td>#1e90ff</td>
+                            <td>30, 144, 255</td>
+                            <td>210, 100%, 56%</td>
+                        </tr>
+                        <tr>
+                            <td>cornflowerblue</td>
+                            <td style="background-color: cornflowerblue"></td>
+                            <td>#6495ed</td>
+                            <td>100, 149, 237</td>
+                            <td>219, 79%, 66%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumslateblue</td>
+                            <td style="background-color: mediumslateblue"></td>
+                            <td>#7b68ee</td>
+                            <td>123, 104, 238</td>
+                            <td>249, 80%, 67%</td>
+                        </tr>
+                        <tr>
+                            <td>royalblue</td>
+                            <td style="background-color: royalblue"></td>
+                            <td>#4169e1</td>
+                            <td>65, 105, 225</td>
+                            <td>225, 73%, 57%</td>
+                        </tr>
+                        <tr>
+                            <td>blue</td>
+                            <td style="background-color: blue"></td>
+                            <td>#0000ff</td>
+                            <td>0, 0, 255</td>
+                            <td>240, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumblue</td>
+                            <td style="background-color: mediumblue"></td>
+                            <td>#0000cd</td>
+                            <td>0, 0, 205</td>
+                            <td>240, 100%, 40%</td>
+                        </tr>
+                        <tr>
+                            <td>darkblue</td>
+                            <td style="background-color: darkblue"></td>
+                            <td>#00008b</td>
+                            <td>0, 0, 139</td>
+                            <td>240, 100%, 27%</td>
+                        </tr>
+                        <tr>
+                            <td>navy</td>
+                            <td style="background-color: navy"></td>
+                            <td>#000080</td>
+                            <td>0, 0, 128</td>
+                            <td>240, 100%, 25%</td>
+                        </tr>
+                        <tr>
+                            <td>midnightblue</td>
+                            <td style="background-color: midnightblue"></td>
+                            <td>#191970</td>
+                            <td>25, 25, 112</td>
+                            <td>240, 64%, 27%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">green</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>greenyellow</td>
+                            <td style="background-color: greenyellow"></td>
+                            <td>#adff2f</td>
+                            <td>173, 255, 47</td>
+                            <td>84, 100%, 59%</td>
+                        </tr>
+                        <tr>
+                            <td>chartreuse</td>
+                            <td style="background-color: chartreuse"></td>
+                            <td>#7fff00</td>
+                            <td>127, 255, 0</td>
+                            <td>90, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>lawngreen</td>
+                            <td style="background-color: lawngreen"></td>
+                            <td>#7cfc00</td>
+                            <td>124, 252, 0</td>
+                            <td>90, 100%, 49%</td>
+                        </tr>
+                        <tr>
+                            <td>lime</td>
+                            <td style="background-color: lime"></td>
+                            <td>#00ff00</td>
+                            <td>0, 255, 0</td>
+                            <td>120, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>limegreen</td>
+                            <td style="background-color: limegreen"></td>
+                            <td>#32cd32</td>
+                            <td>50, 205, 50</td>
+                            <td>120, 61%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>palegreen</td>
+                            <td style="background-color: palegreen"></td>
+                            <td>#98fb98</td>
+                            <td>152, 251, 152</td>
+                            <td>120, 93%, 79%</td>
+                        </tr>
+                        <tr>
+                            <td>lightgreen</td>
+                            <td style="background-color: lightgreen"></td>
+                            <td>#90ee90</td>
+                            <td>144, 238, 144</td>
+                            <td>120, 73%, 75%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumspringgreen</td>
+                            <td style="background-color: mediumspringgreen"></td>
+                            <td>#00fa9a</td>
+                            <td>0, 250, 154</td>
+                            <td>157, 100%, 49%</td>
+                        </tr>
+                        <tr>
+                            <td>springgreen</td>
+                            <td style="background-color: springgreen"></td>
+                            <td>#00ff7f</td>
+                            <td>0, 255, 127</td>
+                            <td>150, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumseagreen</td>
+                            <td style="background-color: mediumseagreen"></td>
+                            <td>#3cb371</td>
+                            <td>60, 179, 113</td>
+                            <td>147, 50%, 47%</td>
+                        </tr>
+                        <tr>
+                            <td>seagreen</td>
+                            <td style="background-color: seagreen"></td>
+                            <td>#2e8b57</td>
+                            <td>46, 139, 87</td>
+                            <td>146, 50%, 36%</td>
+                        </tr>
+                        <tr>
+                            <td>forestgreen</td>
+                            <td style="background-color: forestgreen"></td>
+                            <td>#228b22</td>
+                            <td>34, 139, 34</td>
+                            <td>120, 61%, 34%</td>
+                        </tr>
+                        <tr>
+                            <td>green</td>
+                            <td style="background-color: green"></td>
+                            <td>#008000</td>
+                            <td>0, 128, 0</td>
+                            <td>120, 100%, 25%</td>
+                        </tr>
+                        <tr>
+                            <td>darkgreen</td>
+                            <td style="background-color: darkgreen"></td>
+                            <td>#006400</td>
+                            <td>0, 100, 0</td>
+                            <td>120, 100%, 20%</td>
+                        </tr>
+                        <tr>
+                            <td>yellowgreen</td>
+                            <td style="background-color: yellowgreen"></td>
+                            <td>#9acd32</td>
+                            <td>154, 205, 50</td>
+                            <td>80, 61%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>olivedrab</td>
+                            <td style="background-color: olivedrab"></td>
+                            <td>#6b8e23</td>
+                            <td>107, 142, 35</td>
+                            <td>80, 60%, 35%</td>
+                        </tr>
+                        <tr>
+                            <td>olive</td>
+                            <td style="background-color: olive"></td>
+                            <td>#808000</td>
+                            <td>128, 128, 0</td>
+                            <td>60, 100%, 25%</td>
+                        </tr>
+                        <tr>
+                            <td>darkolivegreen</td>
+                            <td style="background-color: darkolivegreen"></td>
+                            <td>#556b2f</td>
+                            <td>85, 107, 47</td>
+                            <td>82, 39%, 30%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumaquamarine</td>
+                            <td style="background-color: mediumaquamarine"></td>
+                            <td>#66cdaa</td>
+                            <td>102, 205, 170</td>
+                            <td>160, 51%, 60%</td>
+                        </tr>
+                        <tr>
+                            <td>darkseagreen</td>
+                            <td style="background-color: darkseagreen"></td>
+                            <td>#8fbc8b</td>
+                            <td>143, 188, 139</td>
+                            <td>115, 27%, 64%</td>
+                        </tr>
+                        <tr>
+                            <td>lightseagreen</td>
+                            <td style="background-color: lightseagreen"></td>
+                            <td>#20b2aa</td>
+                            <td>32, 178, 170</td>
+                            <td>177, 70%, 41%</td>
+                        </tr>
+                        <tr>
+                            <td>darkcyan</td>
+                            <td style="background-color: darkcyan"></td>
+                            <td>#008b8b</td>
+                            <td>0, 139, 139</td>
+                            <td>180, 100%, 27%</td>
+                        </tr>
+                        <tr>
+                            <td>teal</td>
+                            <td style="background-color: teal"></td>
+                            <td>#008080</td>
+                            <td>0, 128, 128</td>
+                            <td>180, 100%, 25%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">pink</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pink</td>
+                            <td style="background-color: pink"></td>
+                            <td>#ffc0cb</td>
+                            <td>255, 192, 203</td>
+                            <td>350, 100%, 88%</td>
+                        </tr>
+                        <tr>
+                            <td>lightpink</td>
+                            <td style="background-color: lightpink"></td>
+                            <td>#ffb6c1</td>
+                            <td>255, 182, 193</td>
+                            <td>351, 100%, 86%</td>
+                        </tr>
+                        <tr>
+                            <td>hotpink</td>
+                            <td style="background-color: hotpink"></td>
+                            <td>#ff69b4</td>
+                            <td>255, 105, 180</td>
+                            <td>330, 100%, 71%</td>
+                        </tr>
+                        <tr>
+                            <td>deeppink</td>
+                            <td style="background-color: deeppink"></td>
+                            <td>#ff1493</td>
+                            <td>255, 20, 147</td>
+                            <td>328, 100%, 54%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumvioletred</td>
+                            <td style="background-color: mediumvioletred"></td>
+                            <td>#c71585</td>
+                            <td>199, 21, 133</td>
+                            <td>322, 81%, 43%</td>
+                        </tr>
+                        <tr>
+                            <td>palevioletred</td>
+                            <td style="background-color: palevioletred"></td>
+                            <td>#db7093</td>
+                            <td>219, 112, 147</td>
+                            <td>340, 60%, 65%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">purple</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>lavender</td>
+                            <td style="background-color: lavender"></td>
+                            <td>#e6e6fa</td>
+                            <td>230, 230, 250</td>
+                            <td>240, 67%, 94%</td>
+                        </tr>
+                        <tr>
+                            <td>thistle</td>
+                            <td style="background-color: thistle"></td>
+                            <td>#d8bfd8</td>
+                            <td>216, 191, 216</td>
+                            <td>300, 24%, 80%</td>
+                        </tr>
+                        <tr>
+                            <td>plum</td>
+                            <td style="background-color: plum"></td>
+                            <td>#dda0dd</td>
+                            <td>221, 160, 221</td>
+                            <td>300, 47%, 75%</td>
+                        </tr>
+                        <tr>
+                            <td>violet</td>
+                            <td style="background-color: violet"></td>
+                            <td>#ee82ee</td>
+                            <td>238, 130, 238</td>
+                            <td>300, 76%, 72%</td>
+                        </tr>
+                        <tr>
+                            <td>orchid</td>
+                            <td style="background-color: orchid"></td>
+                            <td>#da70d6</td>
+                            <td>218, 112, 214</td>
+                            <td>302, 59%, 65%</td>
+                        </tr>
+                        <tr>
+                            <td>fuchsia</td>
+                            <td style="background-color: fuchsia"></td>
+                            <td>#ff00ff</td>
+                            <td>255, 0, 255</td>
+                            <td>300, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>magenta</td>
+                            <td style="background-color: magenta"></td>
+                            <td>#ff00ff</td>
+                            <td>255, 0, 255</td>
+                            <td>300, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumorchid</td>
+                            <td style="background-color: mediumorchid"></td>
+                            <td>#ba55d3</td>
+                            <td>186, 85, 211</td>
+                            <td>288, 59%, 58%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumpurple</td>
+                            <td style="background-color: mediumpurple"></td>
+                            <td>#9370db</td>
+                            <td>147, 112, 219</td>
+                            <td>260, 60%, 65%</td>
+                        </tr>
+                        <tr>
+                            <td>rebeccapurple</td>
+                            <td style="background-color: rebeccapurple"></td>
+                            <td>#663399</td>
+                            <td>102, 51, 153</td>
+                            <td>270, 50%, 40%</td>
+                        </tr>
+                        <tr>
+                            <td>blueviolet</td>
+                            <td style="background-color: blueviolet"></td>
+                            <td>#8a2be2</td>
+                            <td>138, 43, 226</td>
+                            <td>271, 76%, 53%</td>
+                        </tr>
+                        <tr>
+                            <td>darkviolet</td>
+                            <td style="background-color: darkviolet"></td>
+                            <td>#9400d3</td>
+                            <td>148, 0, 211</td>
+                            <td>282, 100%, 41%</td>
+                        </tr>
+                        <tr>
+                            <td>darkorchid</td>
+                            <td style="background-color: darkorchid"></td>
+                            <td>#9932cc</td>
+                            <td>153, 50, 204</td>
+                            <td>280, 61%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>darkmagenta</td>
+                            <td style="background-color: darkmagenta"></td>
+                            <td>#8b008b</td>
+                            <td>139, 0, 139</td>
+                            <td>300, 100%, 27%</td>
+                        </tr>
+                        <tr>
+                            <td>purple</td>
+                            <td style="background-color: purple"></td>
+                            <td>#800080</td>
+                            <td>128, 0, 128</td>
+                            <td>300, 100%, 25%</td>
+                        </tr>
+                        <tr>
+                            <td>indigo</td>
+                            <td style="background-color: indigo"></td>
+                            <td>#4b0082</td>
+                            <td>75, 0, 130</td>
+                            <td>275, 100%, 25%</td>
+                        </tr>
+                        <tr>
+                            <td>slateblue</td>
+                            <td style="background-color: slateblue"></td>
+                            <td>#6a5acd</td>
+                            <td>106, 90, 205</td>
+                            <td>248, 53%, 58%</td>
+                        </tr>
+                        <tr>
+                            <td>darkslateblue</td>
+                            <td style="background-color: darkslateblue"></td>
+                            <td>#483d8b</td>
+                            <td>72, 61, 139</td>
+                            <td>248, 39%, 39%</td>
+                        </tr>
+                        <tr>
+                            <td>mediumslateblue</td>
+                            <td style="background-color: mediumslateblue"></td>
+                            <td>#7b68ee</td>
+                            <td>123, 104, 238</td>
+                            <td>249, 80%, 67%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">white</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>white</td>
+                            <td style="background-color: white"></td>
+                            <td>#ffffff</td>
+                            <td>255, 255, 255</td>
+                            <td>0, 0%, 100%</td>
+                        </tr>
+                        <tr>
+                            <td>snow</td>
+                            <td style="background-color: snow"></td>
+                            <td>#fffafa</td>
+                            <td>255, 250, 250</td>
+                            <td>0, 100%, 99%</td>
+                        </tr>
+                        <tr>
+                            <td>honeydew</td>
+                            <td style="background-color: honeydew"></td>
+                            <td>#f0fff0</td>
+                            <td>240, 255, 240</td>
+                            <td>120, 100%, 97%</td>
+                        </tr>
+                        <tr>
+                            <td>mintcream</td>
+                            <td style="background-color: mintcream"></td>
+                            <td>#f5fffa</td>
+                            <td>245, 255, 250</td>
+                            <td>150, 100%, 98%</td>
+                        </tr>
+                        <tr>
+                            <td>azure</td>
+                            <td style="background-color: azure"></td>
+                            <td>#f0ffff</td>
+                            <td>240, 255, 255</td>
+                            <td>180, 100%, 97%</td>
+                        </tr>
+                        <tr>
+                            <td>aliceblue</td>
+                            <td style="background-color: aliceblue"></td>
+                            <td>#f0f8ff</td>
+                            <td>240, 248, 255</td>
+                            <td>208, 100%, 97%</td>
+                        </tr>
+                        <tr>
+                            <td>ghostwhite</td>
+                            <td style="background-color: ghostwhite"></td>
+                            <td>#f8f8ff</td>
+                            <td>248, 248, 255</td>
+                            <td>240, 100%, 99%</td>
+                        </tr>
+                        <tr>
+                            <td>whitesmoke</td>
+                            <td style="background-color: whitesmoke"></td>
+                            <td>#f5f5f5</td>
+                            <td>245, 245, 245</td>
+                            <td>0, 0%, 96%</td>
+                        </tr>
+                        <tr>
+                            <td>seashell</td>
+                            <td style="background-color: seashell"></td>
+                            <td>#fff5ee</td>
+                            <td>255, 245, 238</td>
+                            <td>25, 100%, 97%</td>
+                        </tr>
+                        <tr>
+                            <td>beige</td>
+                            <td style="background-color: beige"></td>
+                            <td>#f5f5dc</td>
+                            <td>245, 245, 220</td>
+                            <td>60, 56%, 91%</td>
+                        </tr>
+                        <tr>
+                            <td>oldlace</td>
+                            <td style="background-color: oldlace"></td>
+                            <td>#fdf5e6</td>
+                            <td>253, 245, 230</td>
+                            <td>39, 85%, 95%</td>
+                        </tr>
+                        <tr>
+                            <td>floralwhite</td>
+                            <td style="background-color: floralwhite"></td>
+                            <td>#fffaf0</td>
+                            <td>255, 250, 240</td>
+                            <td>40, 100%, 97%</td>
+                        </tr>
+                        <tr>
+                            <td>ivory</td>
+                            <td style="background-color: ivory"></td>
+                            <td>#fffff0</td>
+                            <td>255, 255, 240</td>
+                            <td>60, 100%, 97%</td>
+                        </tr>
+                        <tr>
+                            <td>antiquewhite</td>
+                            <td style="background-color: antiquewhite"></td>
+                            <td>#faebd7</td>
+                            <td>250, 235, 215</td>
+                            <td>34, 78%, 91%</td>
+                        </tr>
+                        <tr>
+                            <td>linen</td>
+                            <td style="background-color: linen"></td>
+                            <td>#faf0e6</td>
+                            <td>250, 240, 230</td>
+                            <td>30, 67%, 94%</td>
+                        </tr>
+                        <tr>
+                            <td>lavenderblush</td>
+                            <td style="background-color: lavenderblush"></td>
+                            <td>#fff0f5</td>
+                            <td>255, 240, 245</td>
+                            <td>340, 100%, 97%</td>
+                        </tr>
+                        <tr>
+                            <td>mistyrose</td>
+                            <td style="background-color: mistyrose"></td>
+                            <td>#ffe4e1</td>
+                            <td>255, 228, 225</td>
+                            <td>6, 100%, 94%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="mt-2">yellow</h3>
+                <table class="table fullwidth divide mt1">
+                    <thead>
+                        <tr>
+                            <th>颜色名</th>
+                            <th>预览</th>
+                            <th>HEX</th>
+                            <th>RGB</th>
+                            <th>HSL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>gold</td>
+                            <td style="background-color: gold"></td>
+                            <td>#ffd700</td>
+                            <td>255, 215, 0</td>
+                            <td>51, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>yellow</td>
+                            <td style="background-color: yellow"></td>
+                            <td>#ffff00</td>
+                            <td>255, 255, 0</td>
+                            <td>60, 100%, 50%</td>
+                        </tr>
+                        <tr>
+                            <td>lightyellow</td>
+                            <td style="background-color: lightyellow"></td>
+                            <td>#ffffe0</td>
+                            <td>255, 255, 224</td>
+                            <td>60, 100%, 94%</td>
+                        </tr>
+                        <tr>
+                            <td>lemonchiffon</td>
+                            <td style="background-color: lemonchiffon"></td>
+                            <td>#fffacd</td>
+                            <td>255, 250, 205</td>
+                            <td>54, 100%, 90%</td>
+                        </tr>
+                        <tr>
+                            <td>lightgoldenrodyellow</td>
+                            <td style="background-color: lightgoldenrodyellow"></td>
+                            <td>#fafad2</td>
+                            <td>250, 250, 210</td>
+                            <td>60, 80%, 90%</td>
+                        </tr>
+                        <tr>
+                            <td>papayawhip</td>
+                            <td style="background-color: papayawhip"></td>
+                            <td>#ffefd5</td>
+                            <td>255, 239, 213</td>
+                            <td>37, 100%, 92%</td>
+                        </tr>
+                        <tr>
+                            <td>moccasin</td>
+                            <td style="background-color: moccasin"></td>
+                            <td>#ffe4b5</td>
+                            <td>255, 228, 181</td>
+                            <td>38, 100%, 85%</td>
+                        </tr>
+                        <tr>
+                            <td>peachpuff</td>
+                            <td style="background-color: peachpuff"></td>
+                            <td>#ffdab9</td>
+                            <td>255, 218, 185</td>
+                            <td>28, 100%, 86%</td>
+                        </tr>
+                        <tr>
+                            <td>palegoldenrod</td>
+                            <td style="background-color: palegoldenrod"></td>
+                            <td>#eee8aa</td>
+                            <td>238, 232, 170</td>
+                            <td>55, 67%, 80%</td>
+                        </tr>
+                        <tr>
+                            <td>khaki</td>
+                            <td style="background-color: khaki"></td>
+                            <td>#f0e68c</td>
+                            <td>240, 230, 140</td>
+                            <td>54, 77%, 75%</td>
+                        </tr>
+                        <tr>
+                            <td>darkkhaki</td>
+                            <td style="background-color: darkkhaki"></td>
+                            <td>#bdb76b</td>
+                            <td>189, 183, 107</td>
+                            <td>56, 38%, 58%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <div style="all: initial;">
+        <div id="__hcfy__" style="all: initial;"></div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://sc-1253722813.cos.ap-nanjing.myqcloud.com/base64/mytools.css" />
+<script src="https://sc-1253722813.cos.ap-nanjing.myqcloud.com/color/color_convert.js"></script>
+      </main>
+    </div>
+
+    <!-- 页脚 -->
+    
+  
+  <div class="footer bg-color">
+    <div class="footer-main">
+      
+        
+          <div class="link">
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2019 - 2021 <a target="_blank" rel="noopener" href="https://github.com/wuyoukm">wuyoukm</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> </p>
+
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+      <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
+  </div>
+
+  <script>
+    //判断手机还是PC自定义修改样式
+    window.onload = function(){
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "44px";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.height = "44px";
+                document.querySelector("#daodream-container .daodream-launcher-button").style.boxShadow = "-2px 2px 2px 2px rgb(255 255 255 / 50%)";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.cursor = 'url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer';
+        document.querySelector("#daodream-container .daodream-launcher-button").style.backgroundSize = "54px";
+        document.querySelector("#daodream-container .daodream-launcher-enabled").style.right = "5px";
+        document.querySelector("#daodream-container .daodream-launcher-enabled").style.bottom = "130px";
+
+} else {
+      　　　 document.querySelector("#daodream-container .daodream-launcher-button").style.width = "54px";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.height = "54px";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.boxShadow = "-2px 2px 2px 2px rgb(255 255 255 / 50%)";
+        document.querySelector("#daodream-container .daodream-launcher-button").style.cursor = 'url("https://cdn.jsdelivr.net/gh/inkss/common@master/cursor/pointer.png"), pointer';
+        document.querySelector("#daodream-container .daodream-launcher-button").style.backgroundSize = "54px";
+}
+
+  　　}
+  </script>
+
+
+
+    <!-- 渲染tidio即使聊天按钮 -->
+    
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color" pointer>
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <!-- 背景彩带 -->
+    
+      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+    
+    <script src="/js/app.js" data-pjax></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init(option);
+    
+  }
+
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+    }
+  });
+
+  
+</script>
+
+<style>
+.is-position-fixed {
+  position:sticky !important;
+  top: 74px;
+}
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+/* .toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+} */
+</style> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = 'copy';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+            // 返回false, 防止重复触发copy事件  
+            // return false;
+          }
+        })
+        //  监听 ctrl + c事件  
+        // $(document).unbind('keypress').bind('keypress', function (e) {
+        //   if (e.ctrlKey && e.keyCode == 67) {
+        //     doSomething();
+        //     // 返回false, 防止重复触发copy事件  
+        //     return false;
+        //   }
+        // })
+
+        // // 鼠标右键的复制事件  
+        // $(document).unbind('copy').bind('copy', function (e) {
+        //   doSomething();
+        // });
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+
+
+<!-- 图片懒加载 -->
+<script src="/js/lazyload/lazyload@1.9.1.js"></script>
+<script data-pjax>
+  $(function () {
+    $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+      {
+        effect: "show",
+        placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
+      }
+    );
+  });
+</script>
+
+<!-- 卡片滚动动画 -->
+   
+
+<!-- 评论所需js -->
+
+    
+        <!-- 弹幕所需的css和js -->
+        
+<!-- 具体js，请前往valine/script.ejs查看 -->
+
+        <script>
+  var requiredFields = 'nick,mail';
+  requiredFields = requiredFields.split(',');
+  comment_el = '.comment';
+  let looperValine = null;
+  load_valine = function () {
+    if ($(comment_el).length) {
+      var valine = new Valine({
+        el: '#vcomment',
+        path: window.location.pathname,
+        notify: false,
+        verify: false,
+        app_id: "bjFLVsHBEVisYrBAcHtfpj9M-gzGzoHsz",
+        app_key: "iQc97J8OxnjXdwCGkHk8A8aq",
+        placeholder: "客官，说点什么吧",
+        avatar: "robohash",
+        master: "70ae131f04565e058cc68fef752d50aa",   //博主邮箱md5
+        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+        friends: "",
+        metaPlaceholder: { "nick": "昵称/QQ号", "mail": "邮箱" },
+        requiredFields: requiredFields,
+        enableQQ: true,
+      });
+      function debounce(fn) {
+        var timerID = null
+        return function () {
+          var arg = arguments[0]   //获取事件
+          if (timerID) {
+            clearTimeout(timerID)
+          }
+          timerID = setTimeout(function () {
+            fn(arg)              //事件传入函数
+          }, 200)
+        }
+      }
+      //查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+      var themeDanmu = eval('false');
+      var themeLoop = eval('false');
+      var themeLooperTime = '5000' || 5000;
+      var speed = '40' || 20;
+      var isBarrager = true;
+      if (themeDanmu == true) {
+        do_barrager();
+        if ($('.danmuBox').length <= 0) {
+          $('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+        }
+        $('.danmuBtn').on('click', debounce(
+          function () {
+            if ($('.danmuBtn').hasClass('open')) {
+              $('.danmuBtn').removeClass('open')
+              clearInterval(looperValine);
+              $.fn.barrager.removeAll();
+            } else {
+              $('.danmuBtn').addClass("open");
+              do_barrager();
+            }
+          }
+        ))
+      }
+      function do_barrager() {
+        isBarrager && valine.Q(window.location.pathname).find().then(function (comments) {
+          // var num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+          var run_once = true;
+          var looper_time = themeLooperTime;
+          var total = comments.length;
+          // var looper = null;
+          var index = 0;
+          if (total > 0) {
+            barrager();
+          } else {
+            // 当评论数为0的时候，自动关闭弹幕
+            // $('.danmuBtn').removeClass('open');
+          }
+          function barrager() {
+            if (run_once) {
+              //如果是首次执行,则设置一个定时器,并且把首次执行置为false
+              looperValine = setInterval(barrager, looper_time);
+              run_once = false;
+            }
+            var content = comments[index]._serverData.comment;
+            var email = comments[index]._serverData.mail;
+            var link = comments[index]._serverData.link;
+            var newcontent = content.substring(0, 50).replace(/<[^>]+>/g, "");
+            //发布一个弹幕
+            const item = {
+              img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+              info: newcontent, //文字 
+              href: link, //链接 
+              close: true, //显示关闭按钮 
+              speed: speed, //延迟,单位秒,默认6 
+              color: '#fff', //颜色,默认白色 
+              old_ie_color: '#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+            }
+            $('body').barrager(item);
+            //索引自增
+            index++;
+            //所有弹幕发布完毕，清除计时器。
+            if (index == total) {
+              clearInterval(looperValine);
+              if (themeLoop === true) {
+                setTimeout(function () {
+                  do_barrager();
+                }, 5000);
+              } else {
+                $('.danmuBtn').removeClass('open');
+              }
+              return false;
+            }
+
+          }
+        })
+      }
+    }
+  };
+  $(document).ready(load_valine);
+  document.addEventListener('pjax:send', function (e) {
+    
+  })
+  document.addEventListener('pjax:complete', function () {
+    load_valine();
+  });
+</script>
+    
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+	
+		<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+		<script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+		<script src="/js/cursor/explosion.min.js"></script>
+	
+
+
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
+    })
+  </script>
+
+
+
+  </body>
+
+</html>
