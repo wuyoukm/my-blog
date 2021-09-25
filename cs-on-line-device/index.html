@@ -720,8 +720,8 @@
 
 
 
-<div class="main_body" class="text-align: center;">
-    <div class="alert alert-success with-icon container-fixed-xs" style="width: 26%;">
+<div class="main_body" style="text-align: center; ">
+    <div class="alert alert-success with-icon container-fixed-xs " style="width: 26%; ">
         <i class="icon-ok-sign "></i>
         <div class="content container-fixed-xs ">
             <h4>懂的都懂，填写地址直接</h4>
@@ -731,61 +731,61 @@
     </div>
 
     <br>
-    <div class="input-control has-label-left container-fixed-xs center-block " style="width: 26%;">
-        <input id="ipaddress" type="text" class="form-control" placeholder="">
-        <label for="ipaddress" class="input-control-label-left" style="width: 80px; padding: 0 15px;">CS地址:</label>
+    <div class="input-control has-label-left container-fixed-xs center-block " style="width: 26%; ">
+        <input id="ipaddress " type="text " class="form-control " placeholder=" ">
+        <label for="ipaddress " class="input-control-label-left " style="width: 80px; padding: 0 15px; ">CS地址:</label>
     </div>
     <br>
-    <div class="input-control has-label-left container-fixed-xs center-block " style="width: 26%;">
-        <input id="port" type="text" class="form-control" placeholder="">
-        <label for="port" class="input-control-label-left" style="width: 80px; padding: 0 15px;">CS端口:</label>
+    <div class="input-control has-label-left container-fixed-xs center-block " style="width: 26%; ">
+        <input id="port " type="text " class="form-control " placeholder=" ">
+        <label for="port " class="input-control-label-left " style="width: 80px; padding: 0 15px; ">CS端口:</label>
     </div>
     <br>
-    <div class="input-control has-label-left container-fixed-xs center-block " style="width: 26%;">
-        <input id="option" type="text" class="form-control" placeholder="">
-        <label for="option" class="input-control-label-left" style="width: 80px; padding: 0 15px;">上线数:</label>
+    <div class="input-control has-label-left container-fixed-xs center-block " style="width: 26%; ">
+        <input id="option " type="text " class="form-control " placeholder=" ">
+        <label for="option " class="input-control-label-left " style="width: 80px; padding: 0 15px; ">上线数:</label>
     </div>
     <br>
-    <button id="button" name="button" class="btn btn-warning" type="button" onclick="go()">给我冲！</button>
+    <button id="button " name="button " class="btn btn-warning " type="button " onclick="go() ">给我冲！</button>
 </div>
 
 
-<script type="text/javascript">
+<script type="text/javascript ">
     function go() {
-        new $.zui.Messager('正在上线中，请稍等', {
-            type: 'success',
-            placement: 'top-right' // 定义显示位置
+        new $.zui.Messager('正在上线中，请稍等 ', {
+            type: 'success ',
+            placement: 'top-right ' // 定义显示位置
         }).show();
-        var ipaddress = $('#ipaddress').val();
-        var port = $('#port').val();
-        var option = $('#option').val();
+        var ipaddress = $('#ipaddress ').val();
+        var port = $('#port ').val();
+        var option = $('#option ').val();
         var data_tmp = {
-            "ipaddress": ipaddress,
-            "port": port,
-            "option": option
+            "ipaddress ": ipaddress,
+            "port ": port,
+            "option ": option
         };
         $.ajax({
-            type: "POST",
-            url: 'https://service-lr6wixak-1253722813.gz.apigw.tencentcs.com/release/',
-            dataType: "json",
+            type: "POST ",
+            url: 'https://service-lr6wixak-1253722813.gz.apigw.tencentcs.com/release/ ',
+            dataType: "json ",
             data: JSON.stringify(data_tmp),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type ': 'application/json '
             },
             success: function(data) {
                 var item = data.info;
                 for (var i = 0; i < item.length; i++) {
                     new $.zui.Messager(item[i], {
-                        type: 'success',
-                        placement: 'top-right' // 定义显示位置
+                        type: 'success ',
+                        placement: 'top-right ' // 定义显示位置
                     }).show();
                 }
 
             },
             error: function(data) {
-                new $.zui.Messager('啊！不好意思，刚刚开小差了，或者你检查一下地址端口啥的？', {
-                    type: 'warning',
-                    placement: 'top-right' // 定义显示位置
+                new $.zui.Messager('啊！不好意思，刚刚开小差了，或者你检查一下地址端口啥的？ ', {
+                    type: 'warning ',
+                    placement: 'top-right ' // 定义显示位置
                 }).show();
             }
 
@@ -798,12 +798,12 @@
 
 
 <!-- ZUI 标准版压缩后的 CSS 文件 -->
-<!-- <link rel="stylesheet" href="https://cdn.bootcss.com/zui/1.9.2/css/zui.min.css"> -->
+<link rel="stylesheet " href="https://cdn.bootcss.com/zui/1.9.2/css/zui.min.css ">
 
 <!-- ZUI Javascript 依赖 jQuery -->
-<script src="https://cdn.bootcss.com/zui/1.9.2/lib/jquery/jquery.js"></script>
+<script src="https://cdn.bootcss.com/zui/1.9.2/lib/jquery/jquery.js "></script>
 <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
-<script src="https://cdn.bootcss.com/zui/1.9.2/js/zui.min.js"></script>
+<script src="https://cdn.bootcss.com/zui/1.9.2/js/zui.min.js "></script>
       </main>
     </div>
 
