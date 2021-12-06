@@ -4,25 +4,6 @@
   
     
     <entry>
-      <title>typora破解</title>
-      <link href="/2021/12/06/eea7c620-5639-11ec-ba3c-61f7f43c2ee5/"/>
-      <url>/2021/12/06/eea7c620-5639-11ec-ba3c-61f7f43c2ee5/</url>
-      
-        <content type="html"><![CDATA[<h2 id="破解用到的工具下载地址"><a href="#破解用到的工具下载地址" class="headerlink" title="破解用到的工具下载地址"></a>破解用到的工具下载地址</h2><p><a href="https://github.com/Mas0nShi/typoraCracker">https://github.com/Mas0nShi/typoraCracker</a></p><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python typora.py /usr/share/typora/resources/app.asar workstation/outfil</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040016501.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="img"></p><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>​        需要你把typoraCracker\example\patch下的License.js替换刚才生成的在dec_app里面的License.js,然后再进行下面这步python typora.py -u workstation/outfile/dec_app workstation/outappasar</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp License.js /home/ddm/my_tools/typoraCracker-master/workstation/outfile/dec_app</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040020458.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python typora.py -u workstation/outfile/dec_app workstation/outappasar</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040021494.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="替换掉app-asar"><a href="#替换掉app-asar" class="headerlink" title="替换掉app.asar"></a>替换掉app.asar</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /usr/share/typora/resources/app.asar /usr/share/typora/resources/app.asar.bak</span><br><span class="line">sudo cp app.asar /usr/share/typora/resources/</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040023433.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="本地生成序列号"><a href="#本地生成序列号" class="headerlink" title="本地生成序列号"></a>本地生成序列号</h2><p>node keygen.js</p><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040024488.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="激活成功"><a href="#激活成功" class="headerlink" title="激活成功"></a>激活成功</h2><p>邮箱：<a href="mailto:&#99;&#x72;&#x61;&#x63;&#x6b;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6e;">&#99;&#x72;&#x61;&#x63;&#x6b;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6e;</a></p><p>序列号：本地生成的那个</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 工具 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>360安全大脑+火绒环境下的cmd下载绕过</title>
       <link href="/2021/05/26/c50063a0-12f4-11ec-bb63-2dbf0d91096c/"/>
       <url>/2021/05/26/c50063a0-12f4-11ec-bb63-2dbf0d91096c/</url>
@@ -102,6 +83,33 @@
     
     
     <entry>
+      <title>typora破解</title>
+      <link href="/2021/05/13/eea7c620-5639-11ec-ba3c-61f7f43c2ee5/"/>
+      <url>/2021/05/13/eea7c620-5639-11ec-ba3c-61f7f43c2ee5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="破解用到的工具下载地址"><a href="#破解用到的工具下载地址" class="headerlink" title="破解用到的工具下载地址"></a>破解用到的工具下载地址</h2><p><a href="https://github.com/Mas0nShi/typoraCracker">https://github.com/Mas0nShi/typoraCracker</a></p><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python typora.py /usr/share/typora/resources/app.asar workstation/outfil</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040016501.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="img"></p><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>​        需要你把typoraCracker\example\patch下的License.js替换刚才生成的在dec_app里面的License.js,然后再进行下面这步python typora.py -u workstation/outfile/dec_app workstation/outappasar</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp License.js /home/ddm/my_tools/typoraCracker-master/workstation/outfile/dec_app</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040020458.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python typora.py -u workstation/outfile/dec_app workstation/outappasar</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040021494.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="替换掉app-asar"><a href="#替换掉app-asar" class="headerlink" title="替换掉app.asar"></a>替换掉app.asar</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /usr/share/typora/resources/app.asar /usr/share/typora/resources/app.asar.bak</span><br><span class="line">sudo cp app.asar /usr/share/typora/resources/</span><br></pre></td></tr></table></figure><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040023433.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="本地生成序列号"><a href="#本地生成序列号" class="headerlink" title="本地生成序列号"></a>本地生成序列号</h2><p>node keygen.js</p><p><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/202112040024488.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p><h2 id="激活成功"><a href="#激活成功" class="headerlink" title="激活成功"></a>激活成功</h2><p>邮箱：<a href="mailto:&#x63;&#114;&#97;&#99;&#x6b;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#110;">&#x63;&#114;&#97;&#99;&#x6b;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#110;</a></p><p>序列号：本地生成的那个</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 破解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 破解 </tag>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>团队学习计划week1</title>
       <link href="/2021/05/07/c5008ab2-12f4-11ec-bb63-2dbf0d91096c/"/>
       <url>/2021/05/07/c5008ab2-12f4-11ec-bb63-2dbf0d91096c/</url>
@@ -128,3 +136,4 @@
   
   
 </search>
+>
