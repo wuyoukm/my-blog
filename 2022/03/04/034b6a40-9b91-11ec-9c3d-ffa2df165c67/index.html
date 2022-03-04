@@ -23,7 +23,7 @@
 
 
                 <title>
-                    archives | wuyoukm
+                    魔改Daovoice添加实时监控 | wuyoukm
                 </title>
 
                 <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
@@ -723,205 +723,432 @@
     <!-- 内容区域 -->
     <div id="safearea">
       <main class="main" id="pjax-container" style="margin-top: 0;">
-        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
-<div class="lazyload archive-header" data-original="https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c" >
-  <div class="archive-header-title">
-    文章归档
-  </div>
-  <div class="archive-header-desc">
+        
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/13.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
-  <span class="title" id="archive-header-desc"></span>
-  <script>
-  function typedFn() {
-    const el = '#archive-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-  
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<div class="archive-video">
-  <video class="full-video" autoplay loop muted>
-      <source style="width: 100%;height: 100vh;" src="/">
-  </video>
-  <div class="video-header-title">
-    文章归档
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="archive-video-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#archive-video-header-desc';
-    const type = 'archive';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-      
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<!-- hash算法 -->
-
-
-<div class="archive-main">
-  <section class="archive">
-    <div class="archive-content">
-      <ul class="post-archive">
-        
-        
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2022">2022</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/03/04/034b6a40-9b91-11ec-9c3d-ffa2df165c67/" class="post-img lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">03-04</span>
-              </div>
-              <a class="post-title" href="/2022/03/04/034b6a40-9b91-11ec-9c3d-ffa2df165c67/">魔改Daovoice添加实时监控</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/01/28/3bbe6e30-8044-11ec-ae02-f1e79cfacfdf/" class="post-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">01-28</span>
-              </div>
-              <a class="post-title" href="/2022/01/28/3bbe6e30-8044-11ec-ae02-f1e79cfacfdf/">2021年终总结</a>
-            </div>
-          </li>
-        
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2021">2021</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/12/06/eea7c620-5639-11ec-ba3c-61f7f43c2ee5/" class="post-img lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">12-06</span>
-              </div>
-              <a class="post-title" href="/2021/12/06/eea7c620-5639-11ec-ba3c-61f7f43c2ee5/">typora破解</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/05/26/c50063a0-12f4-11ec-bb63-2dbf0d91096c/" class="post-img lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">05-26</span>
-              </div>
-              <a class="post-title" href="/2021/05/26/c50063a0-12f4-11ec-bb63-2dbf0d91096c/">360安全大脑+火绒环境下的cmd下载绕过</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/05/13/c5008ab1-12f4-11ec-bb63-2dbf0d91096c/" class="post-img lazyload" data-original="/medias/11.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">05-13</span>
-              </div>
-              <a class="post-title" href="/2021/05/13/c5008ab1-12f4-11ec-bb63-2dbf0d91096c/">记某次勒索应急响应处理过程</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/05/13/c5008ab0-12f4-11ec-bb63-2dbf0d91096c/" class="post-img lazyload" data-original="/medias/5.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">05-13</span>
-              </div>
-              <a class="post-title" href="/2021/05/13/c5008ab0-12f4-11ec-bb63-2dbf0d91096c/">golang的shellcode加载器(免杀)</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/05/07/c5008ab2-12f4-11ec-bb63-2dbf0d91096c/" class="post-img lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">05-07</span>
-              </div>
-              <a class="post-title" href="/2021/05/07/c5008ab2-12f4-11ec-bb63-2dbf0d91096c/">团队学习计划week1</a>
-            </div>
-          </li>
-        
-      </ul>
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        魔改Daovoice添加实时监控
+      </span>
     </div>
-  </section>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fa fa-calendar"></i> Published in：2022-03-04 |
+        </span>
+      
+
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fa fa-file-text-o"></i> Words: 604 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fa fa-clock-o"></i> Reading time: 2min |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fa fa-eye"></i> reading：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
   
 </div>
+
+
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-content">
+        <p><strong>有一次看到国光用了这个功能好像还蛮屌的,于是自己也用了一下,用的过程中发现一个问题,就是会错过很多消息,不能及时的回复,本着研究的精神,便有了以下的文章</strong></p>
+<span id="more"></span>
+
+<h1 id="魔改Daovoice添加实时监控"><a href="#魔改Daovoice添加实时监控" class="headerlink" title="魔改Daovoice添加实时监控"></a>魔改Daovoice添加实时监控</h1><h2 id="分析源码"><a href="#分析源码" class="headerlink" title="分析源码"></a>分析源码</h2><p>先发一个消息,看整个过程调用了哪些函数<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732195958.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>一眼就能看到关键函数<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732195991.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>跟进去之后下断点<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196031.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<p>然后再来来发送一遍消息,看看消息在哪个变量中,最后确定是在t.body里面<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196058.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>加上alert测试是否正常捕捉到消息<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196086.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<h2 id="对接钉钉"><a href="#对接钉钉" class="headerlink" title="对接钉钉"></a>对接钉钉</h2><p>直接上php代码了,大家伙自己看着改吧</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request_by_curl</span>(<span class="params"><span class="variable">$remote_server</span>, <span class="variable">$post_string</span></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="variable">$ch</span> = curl_init();</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_URL, <span class="variable">$remote_server</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_POST, <span class="number">1</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_CONNECTTIMEOUT, <span class="number">5</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_HTTPHEADER, <span class="keyword">array</span>(<span class="string">&#x27;Content-Type: application/json;charset=utf-8&#x27;</span>));</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_POSTFIELDS, <span class="variable">$post_string</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_RETURNTRANSFER, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 不用开启curl证书验证</span></span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_SSL_VERIFYHOST, <span class="number">0</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_SSL_VERIFYPEER, <span class="number">0</span>);</span><br><span class="line">    <span class="variable">$data</span> = curl_exec(<span class="variable">$ch</span>);</span><br><span class="line">    <span class="comment">//$info = curl_getinfo($ch);</span></span><br><span class="line">    <span class="comment">//var_dump($info);</span></span><br><span class="line">    curl_close(<span class="variable">$ch</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$data</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">XXXXXXXXXX</span>(<span class="params"><span class="variable">$content</span>,<span class="variable">$webhook</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">empty</span>(<span class="variable">$content</span>))&#123;</span><br><span class="line">        <span class="variable">$data</span> = [</span><br><span class="line">             <span class="string">&#x27;msgtype&#x27;</span> =&gt; <span class="string">&#x27;link&#x27;</span>,</span><br><span class="line">             <span class="string">&#x27;link&#x27;</span> =&gt; [</span><br><span class="line">                 <span class="string">&#x27;text&#x27;</span> =&gt; <span class="string">&#x27;您的博客有人留言说: &#x27;</span>.<span class="variable">$content</span>,</span><br><span class="line">                 <span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;您的Daovoice有新的即时消息,请点击查看&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;picUrl&#x27;</span> =&gt; <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;messageUrl&#x27;</span> =&gt; <span class="string">&quot;http://dashboard.daovoice.io/app/XXXX/inboxes/XXXX/conversations/&quot;</span></span><br><span class="line">             ]</span><br><span class="line">         ];</span><br><span class="line">         <span class="variable">$textString</span> = json_encode(<span class="variable">$data</span>);</span><br><span class="line">        <span class="variable">$result</span> = request_by_curl(<span class="variable">$webhook</span>, <span class="variable">$textString</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="variable">$data</span> = [</span><br><span class="line">             <span class="string">&#x27;msgtype&#x27;</span> =&gt; <span class="string">&#x27;link&#x27;</span>,</span><br><span class="line">             <span class="string">&#x27;link&#x27;</span> =&gt; [</span><br><span class="line">                 <span class="string">&#x27;text&#x27;</span> =&gt; <span class="string">&#x27;您有可能收到了一张图片&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;您的Daovoice有新的即时消息,请点击查看&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;picUrl&#x27;</span> =&gt; <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;messageUrl&#x27;</span> =&gt; <span class="string">&quot;http://dashboard.daovoice.io/app/XXXX/inboxes/XXXX/conversations/&quot;</span></span><br><span class="line">             ]</span><br><span class="line">         ];</span><br><span class="line">         <span class="variable">$textString</span> = json_encode(<span class="variable">$data</span>);</span><br><span class="line">        <span class="variable">$result</span> = request_by_curl(<span class="variable">$webhook</span>, <span class="variable">$textString</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$content</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;daovoice_content&#x27;</span>];</span><br><span class="line"><span class="variable">$verify</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;verify&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable">$webhook</span> = <span class="string">&quot;https://oapi.dingtalk.com/robot/send?access_token=XXXX&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$verify</span> == <span class="string">&quot;True&quot;</span>)&#123;</span><br><span class="line">   XXXXXXXXXX(<span class="variable">$content</span>,<span class="variable">$webhook</span>); </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="魔改源码"><a href="#魔改源码" class="headerlink" title="魔改源码"></a>魔改源码</h2><p>先下载JS<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196118.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>然后在sendMessage函数结尾添加代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">httpRequest.open(<span class="string">&quot;POST&quot;</span>,<span class="string">&quot;https://XXXX/XXXX.php&quot;</span>,<span class="literal">true</span>);</span><br><span class="line">httpRequest.setRequestHeader(<span class="string">&quot;Content-Type&quot;</span>,<span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">httpRequest.send(<span class="string">&quot;daovoice_content=&quot;</span>+t.body+<span class="string">&quot;&amp;verify=True&quot;</span>);</span><br><span class="line">httpRequest.onreadystatechange = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(httpRequest.status == <span class="number">200</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;留言成功&quot;</span>);</span><br><span class="line">		        &#125;</span><br><span class="line">		    &#125;</span><br></pre></td></tr></table></figure>
+<p>整体代码效果如下<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196141.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>还可以做更多的优化,例如获取到匿名者的ID,拼装组成URL这样钉钉收到消息,点击链接即可跳转回复,<br>飞书,还有其他的通讯工具类似</p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/JS/" class="">
+              JS
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>wuyoukm</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>本文链接:  </strong>
+    <a href="/2022/03/04/034b6a40-9b91-11ec-9c3d-ffa2df165c67/" target="_blank" title="魔改Daovoice添加实时监控">https://www.wuyoukm.top/2022/03/04/034b6a40-9b91-11ec-9c3d-ffa2df165c67/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2022/01/28/3bbe6e30-8044-11ec-ae02-f1e79cfacfdf/" class="post-nav-link">
+      <div class="title">
+        下一篇文章: <i class="fa fa-angle-right"></i>
+        <div class="title-text">2021年终总结</div>
+      </div>
+      <!-- <div class="content">
+        收获
+5.31号从杭州智顺科技科技有限公司的设备实施人员，离职跳槽到默安科技的安全研究员，以前吧，一直不敢跳槽，因为我怕
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/medias/zfb.jpg" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/medias/wx.jpg" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+        
+          <div class="toc-open-close">catalog</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
+  
+
+  <script>
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+  </script>
+
+
+  
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| '';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
       </main>
     </div>
 
