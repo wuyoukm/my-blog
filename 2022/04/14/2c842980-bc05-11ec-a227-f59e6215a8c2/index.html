@@ -23,7 +23,7 @@
 
 
                 <title>
-                    魔改Daovoice添加实时监控 | wuyoukm
+                    mac版钉钉防撤回 | wuyoukm
                 </title>
 
                 <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
@@ -735,7 +735,7 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/13.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/14.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
@@ -743,27 +743,36 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        魔改Daovoice添加实时监控
+        mac版钉钉防撤回
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fa fa-calendar"></i> Published in：2022-03-04 |
+          <i class="fa fa-calendar"></i> Published in：2022-04-14 |
         </span>
       
 
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> category：
+          
+            <a href="/categories/%E7%A0%B4%E8%A7%A3/" class="post-detail-header_category">
+              破解
+            </a>
+          
+        </span>
       
 
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> Words: 604 |
+            <i class="fa fa-file-text-o"></i> Words: 66 |
           </span>
   
           <span class="min2read">
-            <i class="fa fa-clock-o"></i> Reading time: 2min |
+            <i class="fa fa-clock-o"></i> Reading time: 1min |
           </span>
   
           
@@ -788,26 +797,24 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <p><strong>有一次看到国光用了这个功能好像还蛮屌的,于是自己也用了一下,用的过程中发现一个问题,就是会错过很多消息,不能及时的回复,本着研究的精神,便有了以下的文章</strong></p>
-<span id="more"></span>
+        <h2 id="破解脚本下载地址"><a href="#破解脚本下载地址" class="headerlink" title="破解脚本下载地址"></a>破解脚本下载地址</h2><span id="more"></span>
 
-<h1 id="魔改Daovoice添加实时监控"><a href="#魔改Daovoice添加实时监控" class="headerlink" title="魔改Daovoice添加实时监控"></a>魔改Daovoice添加实时监控</h1><h2 id="分析源码"><a href="#分析源码" class="headerlink" title="分析源码"></a>分析源码</h2><p>先发一个消息,看整个过程调用了哪些函数<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732195958.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>一眼就能看到关键函数<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732195991.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>跟进去之后下断点<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196031.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p>然后再来来发送一遍消息,看看消息在哪个变量中,最后确定是在t.body里面<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196058.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>加上alert测试是否正常捕捉到消息<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196086.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<h2 id="对接钉钉"><a href="#对接钉钉" class="headerlink" title="对接钉钉"></a>对接钉钉</h2><p>直接上php代码了,大家伙自己看着改吧</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request_by_curl</span>(<span class="params"><span class="variable">$remote_server</span>, <span class="variable">$post_string</span></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="variable">$ch</span> = curl_init();</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_URL, <span class="variable">$remote_server</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_POST, <span class="number">1</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_CONNECTTIMEOUT, <span class="number">5</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_HTTPHEADER, <span class="keyword">array</span>(<span class="string">&#x27;Content-Type: application/json;charset=utf-8&#x27;</span>));</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_POSTFIELDS, <span class="variable">$post_string</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_RETURNTRANSFER, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">// 不用开启curl证书验证</span></span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_SSL_VERIFYHOST, <span class="number">0</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_SSL_VERIFYPEER, <span class="number">0</span>);</span><br><span class="line">    <span class="variable">$data</span> = curl_exec(<span class="variable">$ch</span>);</span><br><span class="line">    <span class="comment">//$info = curl_getinfo($ch);</span></span><br><span class="line">    <span class="comment">//var_dump($info);</span></span><br><span class="line">    curl_close(<span class="variable">$ch</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$data</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">XXXXXXXXXX</span>(<span class="params"><span class="variable">$content</span>,<span class="variable">$webhook</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">empty</span>(<span class="variable">$content</span>))&#123;</span><br><span class="line">        <span class="variable">$data</span> = [</span><br><span class="line">             <span class="string">&#x27;msgtype&#x27;</span> =&gt; <span class="string">&#x27;link&#x27;</span>,</span><br><span class="line">             <span class="string">&#x27;link&#x27;</span> =&gt; [</span><br><span class="line">                 <span class="string">&#x27;text&#x27;</span> =&gt; <span class="string">&#x27;您的博客有人留言说: &#x27;</span>.<span class="variable">$content</span>,</span><br><span class="line">                 <span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;您的Daovoice有新的即时消息,请点击查看&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;picUrl&#x27;</span> =&gt; <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;messageUrl&#x27;</span> =&gt; <span class="string">&quot;http://dashboard.daovoice.io/app/XXXX/inboxes/XXXX/conversations/&quot;</span></span><br><span class="line">             ]</span><br><span class="line">         ];</span><br><span class="line">         <span class="variable">$textString</span> = json_encode(<span class="variable">$data</span>);</span><br><span class="line">        <span class="variable">$result</span> = request_by_curl(<span class="variable">$webhook</span>, <span class="variable">$textString</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="variable">$data</span> = [</span><br><span class="line">             <span class="string">&#x27;msgtype&#x27;</span> =&gt; <span class="string">&#x27;link&#x27;</span>,</span><br><span class="line">             <span class="string">&#x27;link&#x27;</span> =&gt; [</span><br><span class="line">                 <span class="string">&#x27;text&#x27;</span> =&gt; <span class="string">&#x27;您有可能收到了一张图片&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;您的Daovoice有新的即时消息,请点击查看&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;picUrl&#x27;</span> =&gt; <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                 <span class="string">&#x27;messageUrl&#x27;</span> =&gt; <span class="string">&quot;http://dashboard.daovoice.io/app/XXXX/inboxes/XXXX/conversations/&quot;</span></span><br><span class="line">             ]</span><br><span class="line">         ];</span><br><span class="line">         <span class="variable">$textString</span> = json_encode(<span class="variable">$data</span>);</span><br><span class="line">        <span class="variable">$result</span> = request_by_curl(<span class="variable">$webhook</span>, <span class="variable">$textString</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$content</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;daovoice_content&#x27;</span>];</span><br><span class="line"><span class="variable">$verify</span> = <span class="variable">$_POST</span>[<span class="string">&#x27;verify&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable">$webhook</span> = <span class="string">&quot;https://oapi.dingtalk.com/robot/send?access_token=XXXX&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$verify</span> == <span class="string">&quot;True&quot;</span>)&#123;</span><br><span class="line">   XXXXXXXXXX(<span class="variable">$content</span>,<span class="variable">$webhook</span>); </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="魔改源码"><a href="#魔改源码" class="headerlink" title="魔改源码"></a>魔改源码</h2><p>先下载JS<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196118.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>然后在sendMessage函数结尾添加代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">httpRequest.open(<span class="string">&quot;POST&quot;</span>,<span class="string">&quot;https://XXXX/XXXX.php&quot;</span>,<span class="literal">true</span>);</span><br><span class="line">httpRequest.setRequestHeader(<span class="string">&quot;Content-Type&quot;</span>,<span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">httpRequest.send(<span class="string">&quot;daovoice_content=&quot;</span>+t.body+<span class="string">&quot;&amp;verify=True&quot;</span>);</span><br><span class="line">httpRequest.onreadystatechange = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(httpRequest.status == <span class="number">200</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;留言成功&quot;</span>);</span><br><span class="line">		        &#125;</span><br><span class="line">		    &#125;</span><br></pre></td></tr></table></figure>
-<p>整体代码效果如下<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196141.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>还可以做更多的优化,例如获取到匿名者的ID,拼装组成URL这样钉钉收到消息,点击链接即可跳转回复,<br>飞书,还有其他的通讯工具类似</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/wuyoukm/MAC-DingTalkRevokeMsgPatcher/">https://github.com/wuyoukm/MAC-DingTalkRevokeMsgPatcher/</a></p>
+<p>大佬们,帮帮忙,点个star</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>本文章长期更新mac钉钉防撤回</p>
+<p>感谢<a target="_blank" rel="noopener" href="https://www.wuleba.com/">吾乐吧</a>提供的windows版本钉钉防撤回以及软件<a target="_blank" rel="noopener" href="https://www.wuleba.com/">吾乐吧</a>站长的帮助</p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/JS/" class="">
-              JS
+            <a href="/tags/%E7%A0%B4%E8%A7%A3/" class="">
+              破解
+            </a>
+          
+            <a href="/tags/%E5%B7%A5%E5%85%B7/" class="">
+              工具
             </a>
           
         </div>
@@ -821,7 +828,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>本文链接:  </strong>
-    <a href="/2022/03/04/034b6a40-9b91-11ec-9c3d-ffa2df165c67/" target="_blank" title="魔改Daovoice添加实时监控">https://www.wuyoukm.top/2022/03/04/034b6a40-9b91-11ec-9c3d-ffa2df165c67/</a>
+    <a href="/2022/04/14/2c842980-bc05-11ec-a227-f59e6215a8c2/" target="_blank" title="mac版钉钉防撤回">https://www.wuyoukm.top/2022/04/14/2c842980-bc05-11ec-a227-f59e6215a8c2/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -839,43 +846,20 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/14.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2022/04/14/2c842980-bc05-11ec-a227-f59e6215a8c2/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇文章:
-        <div class="title-text">mac版钉钉防撤回</div>
-      </div>
-      
-      <!-- <div class="content">
-        破解脚本下载地址
-
-https://github.com/wuyoukm/MAC-DingTalkRevokeMsgPa
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/7.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2022/01/28/3bbe6e30-8044-11ec-ae02-f1e79cfacfdf/" class="post-nav-link">
+    <a href="/2022/03/04/034b6a40-9b91-11ec-9c3d-ffa2df165c67/" class="post-nav-link">
       <div class="title">
         下一篇文章: <i class="fa fa-angle-right"></i>
-        <div class="title-text">2021年终总结</div>
+        <div class="title-text">魔改Daovoice添加实时监控</div>
       </div>
       <!-- <div class="content">
-        总结一下2021吧,还是挺有意义的一年
-
-
-收获
-5.31号从杭州智顺科技科技有限公司的设备实施人员，离职跳槽到默安科技
+        有一次看到国光用了这个功能好像还蛮屌的,于是自己也用了一下,用的过程中发现一个问题,就是会错过很多消息,不能及时的回复,
       </div> -->
     </a>
   </div>
