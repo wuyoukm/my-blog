@@ -759,7 +759,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> Words: 604 |
+            <i class="fa fa-file-text-o"></i> Words: 591 |
           </span>
   
           <span class="min2read">
@@ -799,7 +799,7 @@
 <h2 id="魔改源码"><a href="#魔改源码" class="headerlink" title="魔改源码"></a>魔改源码</h2><p>先下载JS<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196118.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"><br>然后在sendMessage函数结尾添加代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">httpRequest.open(<span class="string">&quot;POST&quot;</span>,<span class="string">&quot;https://XXXX/XXXX.php&quot;</span>,<span class="literal">true</span>);</span><br><span class="line">httpRequest.setRequestHeader(<span class="string">&quot;Content-Type&quot;</span>,<span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">httpRequest.send(<span class="string">&quot;daovoice_content=&quot;</span>+t.body+<span class="string">&quot;&amp;verify=True&quot;</span>);</span><br><span class="line">httpRequest.onreadystatechange = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(httpRequest.status == <span class="number">200</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;留言成功&quot;</span>);</span><br><span class="line">		        &#125;</span><br><span class="line">		    &#125;</span><br></pre></td></tr></table></figure>
 <p>整体代码效果如下<br><img "" class="lazyload placeholder" data-original="https://tc.wuyoukm.top/mweb/16463732196141.jpg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>还可以做更多的优化,例如获取到匿名者的ID,拼装组成URL这样钉钉收到消息,点击链接即可跳转回复,<br>飞书,还有其他的通讯工具类似</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>还可以做更多的优化,例如获取到匿名者的ID,拼装组成URL这样钉钉收到消息,点击链接即可跳转回复</p>
 
       </div>
       <div class="post-tags-categories">
